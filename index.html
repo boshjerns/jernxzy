@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 5%; /* Added 10px padding to the top and bottom */
+            height: 80px; /* Reduced height to make images smaller */
+            background-color: #ffffff; /* Set to white */
+        }
+
+        .menu img {
+            height: 100%; /* Images will fill the height of the .menu */
+            cursor: pointer;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 images per row, adjust as needed */
+            gap: 5px;
+            padding: 20px 5%;
+        }
+
+        .grid-item {
+            width: 100%;
+            padding-bottom: 100%; /* ensures squares */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <a href="URL_FOR_LOGO1" target="_blank"><img src="logos/logo1.jpg" alt="Logo 1"></a>
+        <a href="URL_FOR_LOGO2" target="_blank"><img src="logos/logo2.jpg" alt="Logo 2"></a>
+        <a href="URL_FOR_LOGO3" target="_blank"><img src="logos/logo3.jpg" alt="Logo 3"></a>
+        <a href="URL_FOR_LOGO4" target="_blank"><img src="logos/logo4.jpg" alt="Logo 4"></a>
+    </div>
+    
+    
+    <div class="grid-container" id="imageGrid">
+        <!-- Images will be appended here by JavaScript -->
+    </div>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const imageGrid = document.getElementById('imageGrid');
+    let imageIndex = 1;
+    const extensions = ['webp', 'JPEG', 'png'];
+    let currentExtensionIndex = 0;
+
+    function addImageToGrid() {
+        const currentExtension = extensions[currentExtensionIndex];
+        const imageName = `photo${imageIndex}.${currentExtension}`;
+        const img = new Image();
+
+        img.onload = function() {
+            const gridItem = document.createElement('div');
+            gridItem.classList.add('grid-item');
+            gridItem.style.backgroundImage = `url('images/${imageName}')`;
+            imageGrid.appendChild(gridItem);
+
+            // Try to load the next image
+            imageIndex++;
+            addImageToGrid();
+        };
+
+        img.onerror = function() {
+            // If there are more extensions to try, switch to the next one and reset the index
+            if (currentExtensionIndex < extensions.length - 1) {
+                currentExtensionIndex++;
+                imageIndex = 1;
+                addImageToGrid();
+            } else {
+                // If we were already loading the last extension type, stop
+                console.log(`Failed to load image: images/${imageName}`);
+            }
+        };
+
+        img.src = `images/${imageName}`;
+    }
+
+    addImageToGrid();
+});
+
+
+    </script>
+</body>
+</html>
