@@ -5,39 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photography Portfolio</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
+    .menu {
+        display: flex;
+        flex-wrap: wrap; /* Allow menu items to wrap to the next line on smaller screens */
+        justify-content: center; /* Center align the menu items */
+        padding: 10px 5%;
+        background-color: #ffffff;
+    }
+
+    .menu a {
+        flex: 1; /* Equal width for menu items */
+        max-width: calc(25% - 10px); /* Adjust as needed for the number of menu items */
+        padding: 10px; /* Add padding around each menu item */
+        box-sizing: border-box; /* Include padding in the width calculation */
+        text-align: center; /* Center align text in menu items */
+    }
+
+    .menu img {
+        max-width: 100%; /* Ensure images don't overflow their containers */
+        height: auto; /* Preserve aspect ratio */
+        cursor: pointer;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        padding: 20px 5%;
+    }
+
+    .grid-item {
+        width: 100%;
+        padding-bottom: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Add a media query for screens smaller than 768px (adjust as needed) */
+    @media (max-width: 768px) {
         .menu {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 5%; /* Added 10px padding to the top and bottom */
-            height: 80px; /* Reduced height to make images smaller */
-            background-color: #ffffff; /* Set to white */
+            padding: 10px 0; /* Reduce horizontal padding */
         }
+    }
+</style>
 
-        .menu img {
-            height: 100%; /* Images will fill the height of the .menu */
-            cursor: pointer;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr); /* 3 images per row, adjust as needed */
-            gap: 5px;
-            padding: 20px 5%;
-        }
-
-        .grid-item {
-            width: 100%;
-            padding-bottom: 100%; /* ensures squares */
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
 </head>
 <body>
     <div class="menu">
@@ -47,7 +64,7 @@
         <a href="URL_FOR_LOGO4" target="_blank"><img src="logos/logo4.jpg" alt="Logo 4"></a>
     </div>
     
-    
+
     <div class="grid-container" id="imageGrid">
         <!-- Images will be appended here by JavaScript -->
     </div>
