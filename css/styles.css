@@ -1,120 +1,135 @@
+.image-container {
+    display: flex;
+    flex-direction: column;  /* Stack images vertically */
+    align-items: center;     /* Center images horizontally */
+    gap: 10px;               /* Adjust as needed for spacing between images */
+    padding: 20px;
+}
 
+.image-container img {
+    width: 100%;             /* Make images fill the container width */
+    max-width: 800px;        /* Adjust as needed to set a max width for the images */
+    height: auto;            /* Maintain aspect ratio */
+    object-fit: contain;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 /* Reset default styles for body */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+font-family: 'Arial', sans-serif;
+margin: 0;
+padding: 0;
 }
 
 /* Styles for the header container */
 .header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #ffffff;
 }
 
 /* Styles for the logo menu */
 .menu {
-    display: flex;
-    justify-content: center;
-    padding: 10px 5%;
-    width: 100%; /* Expand the menu to full width */
+display: flex;
+justify-content: center;
+padding: 10px 5%;
+width: 100%; /* Expand the menu to full width */
 }
 
 .menu a {
-    flex: 1;
-    max-width: calc(45% - 10px);
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
+flex: 1;
+max-width: calc(45% - 10px);
+padding: 10px;
+box-sizing: border-box;
+text-align: center;
 }
 
 .menu img {
-    max-width: 100%;
-    height: auto;
-    cursor: pointer;
+max-width: 100%;
+height: auto;
+cursor: pointer;
 }
 
 /* Styles for the text menu */
 .text-menu {
-    display: flex;  
-    justify-content: space-between;  
-    width: 100%;  
-    box-sizing: border-box;
+display: flex;
+flex-direction: column; /* Stack children vertically */
+align-items: center; /* Center items horizontally */
+padding: 20px; /* Add some padding */
 }
 
 .text-menu ul {
-    list-style: none;
-    padding: 0 5%;  /* This padding aligns the ul with the grid */
-    margin: 0;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;  /* Distribute space between the li items */
-    box-sizing: border-box;
-    letter-spacing: 7px; /* Adjust this value to your preference */
-
+list-style: none;
+padding: 0;
+margin: 0;
 }
 
 .text-menu li {
-    margin-right: 0;  /* No need for right margin now */
-    box-sizing: border-box;
-}
-
-.text-menu li:last-child {
-    margin-right: 0;  
+margin: 5px 0; /* Add some vertical spacing between items */
 }
 
 .text-menu a {
-    font-family: 'Oswald', sans-serif; /* Use Oswald font */
-
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    transition: color 0.3s;
+font-family: 'Oswald', sans-serif;
+text-decoration: none;
+color: #333;
+font-size: 16px;
+transition: color 0.3s;
 }
 
 .text-menu a:hover {
-    color: #007bff;
+color: #007bff;
 }
+
 
 /* Styles for the grid container and items */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    padding: 20px 5%;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 5px;
+padding: 20px 5%;
 }
 
 .grid-item {
-    width: 100%;
-    padding-bottom: 100%;
-    background-size: cover;
-    background-position: center;
+width: 100%;
+padding-bottom: 100%;
+background-size: cover;
+background-position: center;
+}
+.triptych-container {
+    display: flex;
+    justify-content: center; /* Center the triptych container horizontally */
+    align-items: center;     /* Center the triptych container vertically */
+    gap: 10px;               /* Adjust as needed for spacing between images */
+    padding: 20px;
 }
 
+.triptych-container img {
+    width: 33.333%;          /* Each image takes up one third of the container */
+    aspect-ratio: 9 / 16 ;    /* Maintain a 16:9 aspect ratio */
+    object-fit: cover;       /* Cover the area of the element, might crop the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 /* Media query for screens smaller than 768px */
 /* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
-    .menu {
-        padding: 10px 0;
-    }
-
-    /* Adjusting spacing for the text menu on smaller screens */
-    .text-menu ul {
-        padding: 0 2%;  /* Adjust padding to create a bit more space on the sides */
-    }
-
-    .text-menu li {
-        margin-right: 10px;  /* Add some right margin to separate the items */
-    }
-
-    .text-menu li:last-child {
-        margin-right: 0;  
-    }
-
-    .text-menu a {
-        font-size: 14px;  /* Increase the font size a bit */
-    }
+.menu {
+padding: 10px 0;
 }
 
+/* Adjusting spacing for the text menu on smaller screens */
+.text-menu ul {
+padding: 0 2%;  /* Adjust padding to create a bit more space on the sides */
+}
+
+.text-menu li {
+margin-right: 10px;  /* Add some right margin to separate the items */
+}
+
+.text-menu li:last-child {
+margin-right: 0;  
+}
+
+.text-menu a {
+font-size: 14px;  /* Increase the font size a bit */
+}
+}
