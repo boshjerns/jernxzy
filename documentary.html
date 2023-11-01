@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live Shows</title>
+    <title>Documentary</title>
 
     <!-- Oswald font -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
 
     <style>
+
+.image-container {
+            display: flex;
+            flex-direction: column;  /* Stack images vertically */
+            align-items: center;     /* Center images horizontally */
+            gap: 10px;               /* Adjust as needed for spacing between images */
+            padding: 20px;
+        }
+
+        .image-container img {
+            width: 100%;             /* Make images fill the container width */
+            max-width: 800px;        /* Adjust as needed to set a max width for the images */
+            height: auto;            /* Maintain aspect ratio */
+            object-fit: contain;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 /* Reset default styles for body */
 body {
     font-family: 'Arial', sans-serif;
@@ -102,7 +118,20 @@ body {
     background-size: cover;
     background-position: center;
 }
+.triptych-container {
+            display: flex;
+            justify-content: center; /* Center the triptych container horizontally */
+            align-items: center;     /* Center the triptych container vertically */
+            gap: 10px;               /* Adjust as needed for spacing between images */
+            padding: 20px;
+        }
 
+        .triptych-container img {
+            width: 33.333%;          /* Each image takes up one third of the container */
+            aspect-ratio: 9 / 16 ;    /* Maintain a 16:9 aspect ratio */
+            object-fit: cover;       /* Cover the area of the element, might crop the image */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 /* Media query for screens smaller than 768px */
 /* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
@@ -154,7 +183,35 @@ body {
         </nav>
     </div>
 
-    <div class="grid-container" id="imageGrid"></div>
+    <div class="image-container">
+        <img src="documentary/photo1.jpg" alt="Photo 1">
+        <img src="documentary/photo2.jpg" alt="Photo 2">
+        <img src="documentary/photo3.jpg" alt="Photo 3">
+        <img src="documentary/photo4.jpg" alt="Photo 4">
+        <img src="documentary/photo5.jpg" alt="Photo 5">
+        <img src="documentary/photo6.jpg" alt="Photo 6">
+        <img src="documentary/photo7.jpg" alt="Photo 7">
+        <img src="documentary/photo8.jpg" alt="Photo 8">
+        <img src="documentary/photo9.jpg" alt="Photo 9">
+        <img src="documentary/photo10.jpg" alt="Photo 10">
+        <img src="documentary/photo11.jpg" alt="Photo 11">
+        <img src="documentary/photo12.jpg" alt="Photo 12">
+
+        <!-- Add more images as needed -->
+    </div>
+    <div class="triptych-container">
+        <img src="documentary/photo17.jpg" alt="Photo 17">
+        <img src="documentary/photo18.jpg" alt="Photo 18">
+        <img src="documentary/photo19.jpg" alt="Photo 19">
+    </div>
+
+
+    <div class="triptych-container">
+    <img src="documentary/photo20.jpg" alt="Photo 20">
+    <img src="documentary/photo21.jpg" alt="Photo 21">
+    <img src="documentary/photo22.jpg" alt="Photo 22">
+</div>
+
 
     <!-- Include the external JS script to load images -->
     <script>
@@ -172,7 +229,7 @@ body {
                 img.onload = function() {
                     const gridItem = document.createElement('div');
                     gridItem.classList.add('grid-item');
-                    gridItem.style.backgroundImage = `url('live shows/${imageName}')`;
+                    gridItem.style.backgroundImage = `url('documentary/${imageName}')`;
                     imageGrid.appendChild(gridItem);
 
                     // Try to load the next image
@@ -188,11 +245,11 @@ body {
                         addImageToGrid();
                     } else {
                         // If we were already loading the last extension type, stop
-                        console.log(`Failed to load image: live shows/${imageName}`);
+                        console.log(`Failed to load image: documentary/${imageName}`);
                     }
                 };
 
-                img.src = `live shows/${imageName}`;
+                img.src = `documentary/${imageName}`;
             }
 
             addImageToGrid();
@@ -201,7 +258,7 @@ body {
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const folderName = 'live shows';
+            const folderName = 'documentary';
             populateImageGrid(folderName);
         });
     </script>
