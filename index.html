@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
     <title>boshjerns</title>
+
+    <!-- Oswald font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 
-</head>
 
+</head>
 <body>
     <div class="header">
         <div class="menu">
             <a href="index.html"><img src="logos/boshlogo.jpg" alt="Logo b"></a>
             <a href="https://foundation.app/@bosh" target="_blank"><img src="logos/logo1.jpg" alt="Logo 1"></a>
             <a href="https://twitter.com/boshjerns" target="_blank"><img src="logos/logo2.jpg" alt="Logo 2"></a>
-            <a href="https://opensea.io/collection/zoo-york-city" target="_blank"><img src="logos/logo3.jpg"
-                    alt="Logo 3"></a>
+            <a href="https://opensea.io/collection/zoo-york-city" target="_blank"><img src="logos/logo3.jpg" alt="Logo 3"></a>
             <a href="https://www.instagram.com/boshjerns/" target="_blank"><img src="logos/logo4.jpg" alt="Logo 4"></a>
         </div>
     </div>
-
-    <!-- Text Menu -->
-    <nav class="text-menu">
-        <ul>
-            <li><a href="live_shows.html">Live Shows</a></li>
-            <li><a href="portrait.html">Portrait</a></li>
-            <li><a href="product.html">Product</a></li>
-            <li><a href="documentary.html">Documentary</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    </div>
-    <div class="grid-container" id="imageGrid">
-        <!-- Images will be appended here by JavaScript -->
+        
+        
+        <!-- Text Menu -->
+        <nav class="text-menu">
+            <ul>
+                <li><a href="live_shows.html">Live Shows</a></li>
+                <li><a href="portrait.html">Portrait</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="documentary.html">Documentary</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </div>
 
+    <div class="image-container">
+        <img src="main/photo1.jpg" alt="Photo 1">
+        <img src="main/photo2.jpg" alt="Photo 2">
+        <img src="main/photo3.jpg" alt="Photo 3">
+        <img src="main/photo4.jpg" alt="Photo 4">
+        <img src="main/photo5.jpg" alt="Photo 5">
+        <img src="main/photo6.jpg" alt="Photo 6">
+        <img src="main/photo7.jpg" alt="Photo 7">
+        <img src="main/photo8.jpg" alt="Photo 8">
+        <img src="main/photo9.jpg" alt="Photo 9">
+        <img src="main/photo10.jpg" alt="Photo 10">
+    </div>
+        
+
+    <!-- Include the external JS script to load images -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             const imageGrid = document.getElementById('imageGrid');
             let imageIndex = 1;
             const extensions = ['webp', 'jpg', 'png', 'PNG'];
@@ -49,10 +62,10 @@
                 const imageName = `photo${imageIndex}.${currentExtension}`;
                 const img = new Image();
 
-                img.onload = function () {
+                img.onload = function() {
                     const gridItem = document.createElement('div');
                     gridItem.classList.add('grid-item');
-                    gridItem.style.backgroundImage = `url('images/${imageName}')`;
+                    gridItem.style.backgroundImage = `url('documentary/${imageName}')`;
                     imageGrid.appendChild(gridItem);
 
                     // Try to load the next image
@@ -60,7 +73,7 @@
                     addImageToGrid();
                 };
 
-                img.onerror = function () {
+                img.onerror = function() {
                     // If there are more extensions to try, switch to the next one and reset the index
                     if (currentExtensionIndex < extensions.length - 1) {
                         currentExtensionIndex++;
@@ -68,16 +81,22 @@
                         addImageToGrid();
                     } else {
                         // If we were already loading the last extension type, stop
-                        console.log(`Failed to load image: images/${imageName}`);
+                        console.log(`Failed to load image: documentary/${imageName}`);
                     }
                 };
 
-                img.src = `images/${imageName}`;
+                img.src = `documentary/${imageName}`;
             }
 
             addImageToGrid();
         });
     </script>
-</body>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const folderName = 'documentary';
+            populateImageGrid(folderName);
+        });
+    </script>
+</body>
 </html>
