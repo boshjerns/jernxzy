@@ -139,7 +139,20 @@ background-position: center;
     object-fit: cover;       /* Cover the area of the element, might crop the image */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+.triptychhhhh-container {
+    display: flex;
+    justify-content: center; /* Center the triptych container horizontally */
+    align-items: center;     /* Center the triptych container vertically */
+    gap: 10px;               /* Adjust as needed for spacing between images */
+    padding: 20px;
+}
 
+.triptychhhhh-container img {
+    width: 50%;          /* Each image takes up one third of the container */
+    aspect-ratio: 9 / 9 ;    /* Maintain a 16:9 aspect ratio */
+    object-fit: cover;       /* Cover the area of the element, might crop the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 /* Media query for screens smaller than 768px */
 /* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
