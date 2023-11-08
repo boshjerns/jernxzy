@@ -166,7 +166,73 @@ background-position: center;
     object-fit: cover;       /* Cover the area of the element, might crop the image */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-/* Media query for screens smaller than 768px */
+
+.ai-projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project h2 {
+    font-family: 'Oswald', sans-serif;
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-family: 'Arial', sans-serif;
+    color: #666;
+    line-height: 1.6;
+}
+
+.project-image {
+    width: 100%; /* Responsive image */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+/* Responsive container */
+.container {
+    width: 95%;
+    margin: auto;
+    overflow: hidden; /* Clearfix for the floats */
+}
+
+.project-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.training-data,
+.model-results {
+    width: 48%; /* Adjust width as needed */
+}
+
+.training-image,
+.result-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.introduction {
+    margin-bottom: 30px;
+}
+
+
+
+
 /* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
     
