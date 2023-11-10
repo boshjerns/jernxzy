@@ -15,7 +15,27 @@ body {
     color: #fff; /* Light text for contrast */
     font-family: 'Oswald', sans-serif; /* Oswald font for content */
 }
+/* Styles for the logo menu */
+.menu {
+display: flex;
+justify-content: center;
+padding: 10px 5%;
+width: 100%; /* Expand the menu to full width */
+}
 
+.menu a {
+flex: 1;
+max-width: calc(45% - 10px);
+padding: 10px;
+box-sizing: border-box;
+text-align: center;
+}
+
+.menu img {
+max-width: 100%;
+height: auto;
+cursor: pointer;
+}
 .menu a img {
     filter: invert(100%) brightness(200%); /* Inverts colors and increases brightness */
 }
@@ -105,9 +125,14 @@ body {
 }
 
 
+/* Styles for the header container */
+.header {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
 
 
-/* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
     
 .menu {
@@ -132,12 +157,7 @@ font-size: 14px;  /* Increase the font size a bit */
 }
 }
 
-/* Styles for the header container */
-.header {
-display: flex;
-flex-direction: column;
-align-items: center;
-}
+
 
 </style>
 </head>
