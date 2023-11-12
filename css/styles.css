@@ -15,9 +15,9 @@
 }
 /* Reset default styles for body */
 body {
-font-family: 'Arial', sans-serif;
-margin: 0;
-padding: 0;
+    background-color: #ffffff; /* Dark background */
+    color: #fff; /* Light text for contrast */
+    font-family: 'Oswald', sans-serif; /* Oswald font for content */
 }
 
 /* Styles for the header container */
@@ -50,34 +50,26 @@ height: auto;
 cursor: pointer;
 }
 
-/* Styles for the text menu */
-.text-menu {
-display: flex;
-flex-direction: column; /* Stack children vertically */
-align-items: center; /* Center items horizontally */
-padding: 20px; /* Add some padding */
-}
-
 .text-menu ul {
-list-style: none;
-padding: 0;
-margin: 0;
+    list-style-type: none;
+    text-align: center; /* Centering menu items */
 }
 
-.text-menu li {
-margin: 5px 0; /* Add some vertical spacing between items */
+.text-menu ul li {
+    display: inline; /* Horizontal menu */
+    margin-right: 20px;
 }
 
 .text-menu a {
-font-family: 'Oswald', sans-serif;
-text-decoration: none;
-color: #333;
-font-size: 16px;
-transition: color 0.3s;
+    color: #000000; /* Bright blue for digital feel */
+    text-decoration: none;
+    font-size: 1.2em; /* Slightly larger font size */
+    text-transform: uppercase; /* Uppercase for a more retro feel */
 }
 
 .text-menu a:hover {
-color: #007bff;
+    color: #4db2ff; /* Neon green for hover effect */
+    text-shadow: 0 0 10px #4db2ff; /* Soft glow on hover */
 }
 
 
