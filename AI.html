@@ -9,6 +9,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
     /* Main Stylesheet (styles.css) */
+.triptych-container {
+    display: flex;
+    justify-content: center; /* Center the triptych container horizontally */
+    align-items: center;     /* Center the triptych container vertically */
+    gap: 10px;               /* Adjust as needed for spacing between images */
+    padding: 20px;
+}
+
+.triptych-container img {
+    width: 33.333%;          /* Each image takes up one third of the container */
+    aspect-ratio: 9 / 16 ;    /* Maintain a 16:9 aspect ratio */
+    object-fit: cover;       /* Cover the area of the element, might crop the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 
 body {
     background-color: #000; /* Dark background */
@@ -178,19 +193,34 @@ font-size: 14px;  /* Increase the font size a bit */
         <nav class="text-menu">
             <ul>
                 <li><a href="index.html">home</a></li>
-                <li><a href="live_shows.html">Live Shows</a></li>
-                <li><a href="portrait.html">Portrait</a></li>
-                <li><a href="product.html">Product</a></li>
-                <li><a href="documentary.html">Documentary</a></li>
-                <li><a href="AI.html">AI / Machine Learning Training</a></li>
+   
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </div>
 
     <body>
+        
         <!-- AI Projects Section -->
 <section class="ai-projects">
+
+    <div style="display: flex; justify-content: center; padding-bottom: 100px;">
+        <img src="AI/21.gif" alt="Photo 4" style="width: 49%;">
+    </div>
+    
+    <div style="display: flex; justify-content: center;padding-bottom: 100px;">
+        <img src="AI/24.gif" alt="Photo 5" style="width: 49%;">
+    </div>
+    
+    <div class="triptych-container" style="width: 50%; margin: 0 auto;">
+    
+        <img src="AI/IMG_0129.PNG" alt="Photo 4">
+        <img src="AI/IMG_0130.PNG" alt="Photo 9">
+        <img src="AI/IMG_0137.PNG" alt="Photo 9">
+        <img src="AI/IMG_0168.PNG" alt="Photo 9">
+        <img src="AI/IMG_0169.PNG" alt="Photo 9">
+
+    </div>
     <div class="container">
         <h1>STABLE DIFFUSION TRAINING</h1>
         <p class="introduction">Examples of my custom-trained stable-diffusion models on targeted images/characters. </p>

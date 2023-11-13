@@ -26,121 +26,25 @@
     </div>
 
 
-    <!-- Text Menu -->
-    <nav class="text-menu">
-        <ul>
-            <li><a href="index.html">home</a></li>
-            <li><a href="live_shows.html">Live Shows</a></li>
-            <li><a href="portrait.html">Portrait</a></li>
-            <li><a href="product.html">Product</a></li>
-            <li><a href="documentary.html">Documentary</a></li>
-            <li><a href="AI.html">AI / Machine Learning Training</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    </div>
-
-    <div class="image-container">
-                <div class="triptych-container">
-            <img src="main/photo23.jpg" alt="Photo 2">
-            <img src="main/photo22.jpg" alt="Photo 3">
-            <img src="main/photo24.jpg" alt="Photo 4">
-        </div>
-
-            <img src="main/photo20.gif" alt="Photo 4"style="width: 66%;">
-        <img src="main/photo3.jpg" alt="Photo 2">
-        <img src="main/photo26.gif" alt="Photo 7" style="width: 66%;">
-
-        <div class="triptychh-container">
-            <img src="main/photo12.jpg" alt="Photo 2">
-            <img src="main/photo13.jpg" alt="Photo 3">
-            <img src="main/photo11.jpg" alt="Photo 4">
-        </div>
-        <img src="main/photo1.jpg" alt="Photo 1">
-
-        <div class="triptych-container">
-
-            <img src="main/photo18.jpg" alt="Photo 4">
-            <img src="main/photo19.jpg" alt="Photo 9">
-        </div>
-
-        <div class="triptychhh-container">
-            <img src="main/photo5.jpg" alt="Photo 5">
-            <img src="main/photo6.jpg" alt="Photo 6">
-            </div>
-            <div class="triptychhh-container">
-
-            <img src="main/photo15.jpg" alt="Photo 7">
-            <img src="main/photo10.jpg" alt="Photo 10">
-
-        </div>
-        <img src="main/photo2.jpg" alt="Photo 3">
-        <div class="triptychhh-container">
-
-        <img src="main/photo4.jpg" alt="Photo 4">
-        <img src="main/photo9.jpg" alt="Photo 9">
-    </div>
+<!-- Text Menu -->
+<!-- <nav class="text-menu">
+    <ul>
+        <li style="font-size: 26px;"><a href="index.html">home</a></li>
+        <li style="font-size: 26px;"><a href="photography.html">Photography</a></li>
+        <li style="font-size: 26px;"><a href="AI.html">AI / Machine Learning Training</a></li>
+        <li style="font-size: 26px;"><a href="contact.html">Contact</a></li>
+    </ul>
+</nav> -->
+</div>
 
 
-        <img src="main/photo7.jpg" alt="Photo 7">
-        <div class="triptychhh-container">
+<a href="photography.html">
+    <img class="responsive-image" src="main/bg2.png" alt="Photo 2" style="width: 49%; aspect-ratio: 9 / 9; object-fit: cover;">
+</a>
+<a href="ai.html">
+    <img class="responsive-image" src="main/aibg.png" alt="Photo 4" style="width: 49%; aspect-ratio: 9 / 9; object-fit: cover;">
+</a>
 
-            <img src="main/photo8.jpg" alt="Photo 7">
-            <img src="main/photo14.jpg" alt="Photo 7">
-
-        </div>
-    </div>
-
-
-    <!-- Include the external JS script to load images -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const imageGrid = document.getElementById('imageGrid');
-            let imageIndex = 1;
-            const extensions = ['webp', 'jpg', 'png', 'PNG'];
-            let currentExtensionIndex = 0;
-
-            function addImageToGrid() {
-                const currentExtension = extensions[currentExtensionIndex];
-                const imageName = `photo${imageIndex}.${currentExtension}`;
-                const img = new Image();
-
-                img.onload = function () {
-                    const gridItem = document.createElement('div');
-                    gridItem.classList.add('grid-item');
-                    gridItem.style.backgroundImage = `url('documentary/${imageName}')`;
-                    imageGrid.appendChild(gridItem);
-
-                    // Try to load the next image
-                    imageIndex++;
-                    addImageToGrid();
-                };
-
-                img.onerror = function () {
-                    // If there are more extensions to try, switch to the next one and reset the index
-                    if (currentExtensionIndex < extensions.length - 1) {
-                        currentExtensionIndex++;
-                        imageIndex = 1;
-                        addImageToGrid();
-                    } else {
-                        // If we were already loading the last extension type, stop
-                        console.log(`Failed to load image: documentary/${imageName}`);
-                    }
-                };
-
-                img.src = `documentary/${imageName}`;
-            }
-
-            addImageToGrid();
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const folderName = 'documentary';
-            populateImageGrid(folderName);
-        });
-    </script>
 </body>
 
 </html>
