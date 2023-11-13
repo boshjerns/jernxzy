@@ -227,7 +227,7 @@ background-position: center;
 
 /* Media query for screens smaller than 768px */
 @media (max-width: 768px) {
-    
+  
 .menu {
 padding: 10px 0;
 }
@@ -248,4 +248,9 @@ margin-right: 0;
 .text-menu a {
 font-size: 14px;  /* Increase the font size a bit */
 }
+}
+.responsive-image {
+    width: 100%;
+    aspect-ratio: auto;
+    object-fit: cover;
 }
