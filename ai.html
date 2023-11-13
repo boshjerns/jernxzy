@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI / MACHINE LEARNING</title>
+
+    <!-- Oswald font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+    /* Main Stylesheet (styles.css) */
+.triptych-container {
+    display: flex;
+    justify-content: center; /* Center the triptych container horizontally */
+    align-items: center;     /* Center the triptych container vertically */
+    gap: 10px;               /* Adjust as needed for spacing between images */
+    padding: 20px;
+}
+
+.triptych-container img {
+    width: 33.333%;          /* Each image takes up one third of the container */
+    aspect-ratio: 9 / 16 ;    /* Maintain a 16:9 aspect ratio */
+    object-fit: cover;       /* Cover the area of the element, might crop the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+body {
+    background-color: #000; /* Dark background */
+    color: #fff; /* Light text for contrast */
+    font-family: 'Oswald', sans-serif; /* Oswald font for content */
+}
+/* Styles for the logo menu */
+.menu {
+display: flex;
+justify-content: center;
+padding: 10px 5%;
+width: 100%; /* Expand the menu to full width */
+}
+
+.menu a {
+flex: 1;
+max-width: calc(45% - 10px);
+padding: 10px;
+box-sizing: border-box;
+text-align: center;
+}
+
+.menu img {
+max-width: 100%;
+height: auto;
+cursor: pointer;
+}
+.menu a img {
+    filter: invert(100%) brightness(200%); /* Inverts colors and increases brightness */
+}
+
+
+.text-menu ul {
+    list-style-type: none;
+    text-align: center; /* Centering menu items */
+}
+
+.text-menu ul li {
+    display: inline; /* Horizontal menu */
+    margin-right: 20px;
+}
+
+.text-menu a {
+    color: #0b7dda; /* Bright blue for digital feel */
+    text-decoration: none;
+    font-size: 1.2em; /* Slightly larger font size */
+    text-transform: uppercase; /* Uppercase for a more retro feel */
+}
+
+.text-menu a:hover {
+    color: #4dff4d; /* Neon green for hover effect */
+    text-shadow: 0 0 10px #4dff4d; /* Soft glow on hover */
+}
+.ai-projects {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.project {
+    margin-bottom: 40px;
+}
+
+.project h2 {
+    font-family: 'Oswald', sans-serif;
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-family: 'Arial', sans-serif;
+    color: #a2a1a1;
+    line-height: 1.6;
+}
+
+.project-image {
+    width: 100%; /* Responsive image */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top: 10px;
+}
+/* Responsive container */
+.container {
+    width: 95%;
+    margin: auto;
+    overflow: hidden; /* Clearfix for the floats */
+}
+
+.project-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.training-data,
+.model-results {
+    width: 48%; /* Adjust width as needed */
+}
+
+.training-image,
+.result-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.introduction {
+    margin-bottom: 30px;
+    color: #878686;
+}
+
+
+/* Styles for the header container */
+.header {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+
+@media (max-width: 768px) {
+    
+.menu {
+padding: 10px 0;
+}
+
+/* Adjusting spacing for the text menu on smaller screens */
+.text-menu ul {
+padding: 0 2%;  /* Adjust padding to create a bit more space on the sides */
+}
+
+.text-menu li {
+margin-right: 10px;  /* Add some right margin to separate the items */
+}
+
+.text-menu li:last-child {
+margin-right: 0;  
+}
+
+.text-menu a {
+font-size: 14px;  /* Increase the font size a bit */
+}
+}
+
+
+
+</style>
+</head>
+<body>
+    <div class="header">
+        <div class="menu">
+            <a href="index.html"><img src="logos/boshlogo.jpg" alt="Logo b"></a>
+            <a href="https://foundation.app/@bosh" target="_blank"><img src="logos/logo1.jpg" alt="Logo 1"></a>
+            <a href="https://twitter.com/boshjerns" target="_blank"><img src="logos/logo2.jpg" alt="Logo 2"></a>
+            <a href="https://opensea.io/collection/zoo-york-city" target="_blank"><img src="logos/logo3.jpg" alt="Logo 3"></a>
+            <a href="https://www.instagram.com/boshjerns/" target="_blank"><img src="logos/logo4.jpg" alt="Logo 4"></a>
+        </div>
+    </div>
+        
+        
+        <!-- Text Menu -->
+        <nav class="text-menu">
+            <ul>
+                <li><a href="index.html">home</a></li>
+   
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <body>
+        
+        <!-- AI Projects Section -->
+<section class="ai-projects">
+
+    <div style="display: flex; justify-content: center; padding-bottom: 100px;">
+        <img src="AI/21.gif" alt="Photo 4" style="width: 49%;">
+    </div>
+    
+    <div style="display: flex; justify-content: center;padding-bottom: 100px;">
+        <img src="AI/24.gif" alt="Photo 5" style="width: 49%;">
+    </div>
+    
+    <div class="triptych-container" style="width: 50%; margin: 0 auto;">
+    
+        <img src="AI/IMG_0129.PNG" alt="Photo 4">
+        <img src="AI/IMG_0130.PNG" alt="Photo 9">
+        <img src="AI/IMG_0137.PNG" alt="Photo 9">
+        <img src="AI/IMG_0168.PNG" alt="Photo 9">
+        <img src="AI/IMG_0169.PNG" alt="Photo 9">
+
+    </div>
+    <div class="container">
+        <h1>STABLE DIFFUSION TRAINING</h1>
+        <p class="introduction">Examples of my custom-trained stable-diffusion models on targeted images/characters. </p>
+        <!-- Project 1 -->
+        <div class="project">
+            <h2>Uncanny Valley: Self Portrait Series, April 2022</h2>
+            <p>This series leverages a custom AI model trained on photos of myself to craft hyper-realistic digital self-portraits.</p>
+            <div class="project-content">
+                <div class="training-data">
+                    <h3>Training Data (selfies)</h3>
+                    <img src="AI/2.png" alt="Training Data for Project 1" class="training-image">
+                </div>
+                <div class="model-results">
+                    <h3>Results from Stable Diffusion Model</h3>
+                    <img src="AI/1.png" alt="Result from Stable Diffusion Model for Project 1" class="result-image">
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="project">
+            <h2>Portrait Series from Marfa, Texas, 2023</h2>
+            <p>This is work from a stable diffusion portrait series that I conducted in Marfa 2023.  Each individual had a stable diffusion model trained off of their image and then each model was used to created a similar style, photorealistic portrait of the subject.</p>
+            <div class="project-content">
+                <div class="training-data">
+                    <h3>Training Data (photographs of individuals)</h3>
+                    <img src="AI/mm.png" alt="Training Data for Project 1" class="training-image">
+                </div>
+                <div class="model-results">
+                    <h3>Portraits from individuals stable diffusion model</h3>
+                    <img src="AI/jpjp.png" alt="Result from Stable Diffusion Model for Project 1" class="result-image" style="width: 75%;">
+        
+        
+                </div>
+        </div>
+
+
+        <div class="project">
+            <h2>Training on Illustrated Character 'Jeff' by Monster Mike</h2>
+            <p>This is a stable diffusion training on artist 'Monster Mike's' character named Jeff who appears frequently in his work.  We trained a model on 'Jeff' for a project that will be released in the future.</p>
+            <div class="project-content">
+                <div class="training-data">
+                    <h3>Training Data (artists artwork)</h3>
+                    <img src="AI/mike3.png" alt="Training Data for Project 1" class="training-image">
+                </div>
+                <div class="model-results">
+                    <h3>Results from Stable Diffusion Model 2D & 3D (Fully stable diffusion)</h3>
+                    <img src="AI/mike1.jpg" alt="Result from Stable Diffusion Model for Project 1" class="result-image" style="width: 45%;">
+
+                    <img src="AI/mike2.jpg" alt="Result from Stable Diffusion Model for Project 1" class="result-image" style="width: 45%;">
+                    <img src="AI/mike.gif" alt="Result from Stable Diffusion Model for Project 1" class="result-image" style="width: 45%;">
+
+                </div>
+    </div>
+    <div class="project">
+        <h2>Training on Skulls of Luci by Sam Spratt</h2>
+        <p></p>
+        <div class="project-content">
+            <div class="training-data">
+                <h3>Training Data (artists artwork)</h3>
+                <img src="AI/samsprattexample.png" alt="Training Data for Project 1" class="training-image">
+            </div>
+            <div class="model-results">
+                <h3>Results from Stable Diffusion Model (Fully stable diffusion)</h3>
+                <img src="AI/33333.png" alt="Result from Stable Diffusion Model for Project 1" class="result-image" style="width: 95%;">
+
+    
+            </div>
+</div>
+
+</section>
+     <!-- AI Projects Section -->
+     <section class="ai-projects">
+        <div class="container">
+            <h1>Prompting for Applications</h1>
+            <p class="introduction">Examples of prompting for AI. </p>
+            <!-- Project 1 -->
+            <div class="project">
+                <h2>Photo AI-ssistant // Realistic Photography-like AI Images</h2>
+                <p>Photo AI-ssistant is a website that allows users to generate photo-realistic people based on simple user inputs. The website uses a stable diffusion model to ensure that the generated images are highly realistic and meet the user's specifications. Users can pass through a very simple prompt on the website, which the site handles to pass a more complicated prompt to the stable diffusion model. This process ensures that the generated images are photo-realistic and of the highest quality possible.  </p>
+                <div class="project-content">
+                    <div class="project-content">
+                        <h3><a href="https://aissistant.vercel.app/">https://aissistant.vercel.app/</a>
+                        </h3>
+                        <img src="AI/app2.png" alt="Training Data for Project 1" class="training-image"  style="width: 35%;">
+                    </div>
+                    <div class="model-results">
+                        <h3></h3>
+                        <img src="AI/app3.png" alt="Training Data for dProject 1" class="training-image"  style="width: 55%;">
+
+                    </div>
+
+                    
+                </div>
+            </div>
+    </section>
+    
+    </body>
+
+</body>
+</html>
