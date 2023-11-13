@@ -12,12 +12,16 @@
     <style>
         @media screen and (max-width: 768px) {
             .responsive-image {
-                width: 100% !important; /* Overrides other inline styles */
+                width: 75% !important; /* Overrides other inline styles */
                 aspect-ratio: auto;
                 object-fit: cover;
+                display: block; /* Ensures the image is treated as a block-level element */
+                margin-left: auto; /* Combined with margin-right: auto, this centers the image */
+                margin-right: auto;
             }
         }
     </style>
+    
 
 </head>
 
