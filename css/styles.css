@@ -250,7 +250,7 @@ font-size: 14px;  /* Increase the font size a bit */
 }
 }
 .responsive-image {
-    width: 100%;
+    width: 79% !important;
     aspect-ratio: auto;
     object-fit: cover;
 }
