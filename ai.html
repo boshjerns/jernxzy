@@ -147,6 +147,20 @@ display: flex;
 flex-direction: column;
 align-items: center;
 }
+/* Default styles for all images */
+.responsive-image img {
+    width: 100%; /* Default to full width on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Styles for larger screens (e.g., desktops) */
+@media screen and (min-width: 600px) {
+    .responsive-image img {
+        width: 50%; /* Adjust to desired width on larger screens */
+    }
+}
+
+/* Additional breakpoints for other devices can be added as needed */
 
 
 @media (max-width: 768px) {
@@ -209,15 +223,15 @@ font-size: 14px;  /* Increase the font size a bit */
     <h1 style="text-align: center; margin-top: 40px;">AI / STABLE DIFFUSION:</h1>
 
     <div style="display: flex; justify-content: center; padding-bottom: 100px; padding-top: 100px;">
-        <img src="AI/21.gif" alt="Photo 4" style="width: 50%;">
+        <img src="AI/21.gif" alt="Photo 4" style="width: 70%;">
     </div>
     
     <div style="display: flex; justify-content: center;padding-bottom: 100px;">
-        <img src="AI/24.gif" alt="Photo 5" style="width: 50%;">
+        <img src="AI/24.gif" alt="Photo 5" style="width: 70%;">
     </div>
     
     <div style="display: flex; justify-content: center;padding-bottom: 100px;">
-        <img src="AI/g12.gif" alt="Photo 5" style="width: 67%;">
+        <img src="AI/g12.gif" alt="Photo 5" style="width: 80%;">
     </div>
 
     <div style="display: flex; justify-content: center;padding-bottom: 100px;">
